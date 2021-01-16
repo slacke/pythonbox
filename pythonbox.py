@@ -2,12 +2,12 @@ import sys,os
 
 # get current path
 pythonbox_path = os.path.dirname(__file__)
-custom_path = pythonbox_path + r"\custom_lib"
-outsource_path = pythonbox_path + r"\outsource_lib"
+customs_path = pythonbox_path + r"\customs"
+packages_path = pythonbox_path + r"\packages"
 
 # add path to python sys path
-sys.path.append(custom_path)
-sys.path.append(outsource_path)
+sys.path.append(customs_path)
+sys.path.append(packages_path)
 print("Modify PYTHONPATH...")
 
 # read pythonbox.ini and add to environment path

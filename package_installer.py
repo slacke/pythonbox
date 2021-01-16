@@ -1,7 +1,8 @@
 import os
 
 all_packages = []
-pythonbox_path = ""
+packages_path = ""
+customs_path = ""
 
 def read_pythonbox_file():
     if(os.path.exists("pythonbox.ini")):
@@ -27,13 +28,16 @@ def read_pythonbox_file():
                 all_packages.append(line)
 
 def install_package(package_name):
-    command = r"pip install --upgrade --target={0} {1}".format(pythonbox_path, package_name)
+    command = r"pip install --upgrade --target={0} {1}".format(packages_path, package_name)
     os.system(command)
 
 if __name__ == "__main__": 
-    pythonbox_path = os.path.join(os.path.dirname(__file__), "outsource_lib")
-    if not os.path.exists(pythonbox_path):
-        os.mkdir(pythonbox_path)
+    packages_path = os.path.join(os.path.dirname(__file__), "packages")
+    if not os.path.exists(packages_path):
+        os.mkdir(packages_path)
+    customs_path = os.path.join(os.path.dirname(__file__), "customs")
+    if not os.path.exists(customs_path):
+        os.mkdir(customs_path)
     read_pythonbox_file()
     if all_packages:
         for package_name in all_packages:
