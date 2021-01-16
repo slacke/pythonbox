@@ -19,7 +19,7 @@ Self contained environment that manage dependencies and path for python.
 
 2. Run **package_controller.py** to install packages.
 
-The package will install within **outsource_lib** folder and would be add to python path with any code that import pythonbox
+The package will be install in **outsource_lib** folder and would be add to python path with any code that import pythonbox
 
 If there is any file that need to be in system environment PATH
 
