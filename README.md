@@ -15,9 +15,11 @@ Self contained environment that manage dependencies and path for python.
 
 ### How to use?
 
-Add package name to install in pythonbox.ini, I added pyperclip package there just to be an example
+1. Add package name to install in **pythonbox.ini**, I added pyperclip package there just to be an example
 
-Then run package_controller.py to install packages.
+2. Run **package_controller.py** to install packages.
+
+The package will install within **outsource_lib** folder and would be add to python path with any code that import pythonbox
 
 If there is any file that need to be in system environment PATH
 
